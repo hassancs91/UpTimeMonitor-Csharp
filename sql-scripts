@@ -1,0 +1,28 @@
+CREATE TABLE [dbo].[uptime](
+	[scanid] [int] IDENTITY(1,1) NOT NULL,
+	[websiteid] [int] NULL,
+	[time] [datetime] NULL,
+	[status] [bit] NULL,
+	[responseTime] [int] NOT NULL,
+ CONSTRAINT [PK_records] PRIMARY KEY CLUSTERED 
+(
+	[scanid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+CREATE TABLE [dbo].[websites](
+	[websiteid] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[url] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[websiteid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
